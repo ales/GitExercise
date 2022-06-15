@@ -1,3 +1,3 @@
-function cheer(parametr:string) {
-  return `Cheer for the ${parametr}`;
+function cheer(parameter: string) {
+  return "Cheer for the" + parameter;
 }
