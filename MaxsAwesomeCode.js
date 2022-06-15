@@ -1,3 +1,3 @@
-count => () => {
+count = () => {
     return 33;
 };
