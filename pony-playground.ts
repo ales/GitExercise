@@ -16,11 +16,17 @@ function ponyFactory(emojiFromParam: string = "📢"): Pony {
     if (_privateProperty) _privateProperty++; // this compiles fine, what a smart compiler! this is the way!
   };
 
+  function _cheerUp(): void {
+    if (_privateProperty) _privateProperty += Math.random() > 0.8 ? 10 : 1; // 20% chance for +10
+  }
+
   return {
     // object structure starts here { <---
     // i wanted the previous comment to be at the same line as the "return {" but the prettier says no :(
     run(): Pony {
       _setEngines();
+      _cheerUp();
+
       console.log("Run!");
       return this; // context is king!
     },
