@@ -1,3 +1,3 @@
 function cheer(parametr: string) {
-  return `Cheer ${parametr}. Ostrava!!!`;
+  return `${parametr} je cyp! Ostrava!!!`;
 }
