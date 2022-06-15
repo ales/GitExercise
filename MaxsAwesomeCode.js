@@ -1,3 +1,3 @@
-count => () => {
-    return 33;
+count = (age) => {
+    return `I am ${age} years old`;
 };
