@@ -1,4 +1,5 @@
-function greet(name, greet) {
-  console.log(name);
-  console.log(greet);
+function greet(max) {
+  return `Hi ${max}`;
 }
+
+console.log(greet('Max'));
