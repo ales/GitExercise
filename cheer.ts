@@ -7,3 +7,10 @@ fetch("http://www.qda.cz").then((resp: Response) => {
     console.log(cheer(str));
   });
 });
+
+(async () => {
+  const resp: Response = await fetch("http://www.qda.cz");
+  const str: string = await resp.text();
+
+  console.log(cheer(str));
+})();
