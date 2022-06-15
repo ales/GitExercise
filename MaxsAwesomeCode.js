@@ -1,3 +1,3 @@
 count = (age) => {
-    return `I am ${age} years old`;
+  return 2;
 };
