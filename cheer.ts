@@ -1,3 +1,3 @@
-function cheer() {
-  return "Javascript rulez dude";
+function cheer(parameter: string) {
+  return "Cheer for the" + parameter;
 }
