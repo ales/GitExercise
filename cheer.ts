@@ -2,7 +2,7 @@ function cheer(parametr: string): string {
   return `${parametr} je cyp! Ostrava!!!`;
 }
 
-type InternalMemory = number; // just for the sake of science
+type InternalMemory = number | null; // just for the sake of science; nullable -- is this actually the JS way?
 
 interface Pony {
   run(): Pony;
@@ -11,26 +11,28 @@ interface Pony {
 }
 
 function ponyFactory(emojiFromParam: string = "📢"): Pony {
-  const privateConst = 42;
-  let privateProperty: InternalMemory | null = 0; // nullable -- is this actually the JS way?
+  const _privateConst = 42;
+  let _privateProperty: InternalMemory = 0;
 
   const _setEngines = () => {
     // privateProperty++; object is possibly null error!
-    privateProperty!++; // bang! it's not!
-    if (privateProperty) privateProperty++; // but this compiles too, what a smart compiler!
+    _privateProperty!++; // bang! it's not! -- this is kinda hack, look 1 down
+    if (_privateProperty) _privateProperty++; // this compiles fine, what a smart compiler! this is the way!
   };
 
   return {
     // object structure starts here { <---
     // i wanted the previous comment to be at the same line as the "return {" but the prettier says no :(
     run(): Pony {
-      _setEngines(); // dunno what's the correct convention for private functions naming
+      _setEngines();
       console.log("Run!");
       return this; // context is king!
     },
     play(song: string): void {
       console.log(
-        `🎶 ${song} @ ${privateConst * privateProperty!} ${this.publicProperty}`
+        `🎶 ${song} @ ${_privateConst * _privateProperty!} ${
+          this.publicProperty
+        }`
       );
     },
     publicProperty: emojiFromParam, // no way to write the type explicitly?
