@@ -1,6 +1,5 @@
-count = (age, dogYearsAge) => {
-  return age * 2 + dogYearsAge;
+count = (age, catYears) => {
+  return age + catYears;
 };
 
-console.log(count() * 2);
 console.log(count());
