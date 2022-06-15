@@ -1,6 +1,5 @@
-count = (age, dogYearsAge) => {
-  return age * 2 + dogYearsAge;
+count = (age, catYears) => {
+  return "Counting the countless " + age * 2 + catYears;
 };
 
-console.log(count() * 2);
 console.log(count());
