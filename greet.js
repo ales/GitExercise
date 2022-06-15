@@ -1,3 +1,3 @@
 function greet(name) {
-  console.log("Ahoj" + name);
+  console.log("Greetings " + name);
 }
