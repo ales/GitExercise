@@ -3,3 +3,4 @@ count = (age, dogYearsAge) => {
 };
 
 console.log(count() * 2);
+console.log(count());
