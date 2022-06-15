@@ -3,9 +3,7 @@ function cheer(parametr: string): string {
 }
 
 fetch("http://www.qda.cz").then((resp: Response) => {
-  resp.blob().then((value: Blob) => {
-    value.text().then((str: string) => {
-      console.log(cheer(str));
-    });
+  resp.text().then((str: string) => {
+    console.log(cheer(str));
   });
 });
