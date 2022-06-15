@@ -1,3 +1,3 @@
-count = (age) => {
-  return 2;
+count = (age, dogYearsAge) => {
+  return age + dogYearsAge;
 };
